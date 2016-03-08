@@ -1,0 +1,113 @@
+\documentclass{beamer}
+
+\usepackage{microtype}
+\usepackage{default}
+
+\usetheme{simple}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[justification=centering]{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{pstricks}
+\setmainfont{Fira Sans}
+\setsansfont{Fira Sans}
+\setmonofont{Fira Mono}
+\captionsetup[subfigure]{labelformat=empty}
+\captionsetup[figure]{labelformat=empty}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+\setbeamerfont{frametitle}{size=\LARGE}
+\newfontfamily\DejaSans{DejaVu Sans}
+\setbeamerfont{title}{family=\texttt,size=\huge}
+\usepackage[scale=2]{ccicons}
+\title{Writing interaction with i-score}
+\date{\today}
+\author{Jean-Michaël Celerier}
+\institute{LaBRI}
+\date{March 09, 2016}
+
+
+\begin{document}
+	\maketitle
+	
+	\begin{frame}
+		\frametitle{The problem}
+		\Large
+		\begin{itemize}
+			\item<1-> A lot of tools for entirely fixed temporal content \\ $\rightarrow$ traditional song-writing.
+			\item<2-> A lot of tools for fully interactive content  \\  $\rightarrow$ artistic installations.~\\~\\
+			\item<3-> What goes in between ?    	
+		\end{itemize}    
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Visual temporal programming language}
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{images/iscore.png}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Working with distributed software}
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{images/jamoma.jpg}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Conditions}
+		\begin{figure}
+			\centering\psscalebox{0.8}{
+				\input{images/cond.tex}}
+		\end{figure}    
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Interactive triggering}
+		\begin{figure}
+			\centering\psscalebox{0.8}{
+				\input{images/trig.tex}}
+		\end{figure}    
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Mapping, looping, and computations}
+		\hspace{-1cm}
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\centering
+				\input{images/mapping.tex}
+	    	\end{column}
+	    	\hspace{-1cm}
+	    	
+			\begin{column}{0.5\textwidth}
+				\centering
+				\input{images/loop.tex}
+			\end{column}
+		\end{columns}
+		
+	\end{frame}
+	
+	
+    \begin{frame}
+    	\Huge
+    	\centering{Demonstration}
+    \end{frame}
+
+
+    \begin{frame}
+    	\frametitle{Ongoing research}
+    	\Large
+    	\begin{itemize}
+    		\item Spatial data creation and management.
+    		\item Audio integration.
+    		\item Handling specific interaction patterns (gestures, etc). 
+    		\item Constraint solving to check unsound scores.   		
+    	\end{itemize}
+    	\centering
+    	\Huge Thanks for your attention.
+    \end{frame}
+\end{document}
